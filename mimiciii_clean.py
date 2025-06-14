@@ -5,8 +5,6 @@ import datasets
 import polars as pl
 from pathlib import Path
 
-REPOSITORY_PATH = Path(__file__).parent
-
 logger = datasets.logging.get_logger(__name__)
 
 
@@ -29,7 +27,7 @@ MIMIC-III-clean: A medical coding dataset from the paper: Automated Medical Codi
 The dataset is created from MIMIC-IV containing ICD-9-CM and ICD-9-PCS codes. You can obtain the license in https://physionet.org/content/mimiciii/1.4/.
 """
 
-_URL = REPOSITORY_PATH / "data" / "processed" / "mimiciii_clean"
+_URL =  Path("data")  / "processed" / "mimiciii_clean"
 _URLS = {
     "train": _URL / "train.parquet",
     "val": _URL / "val.parquet",

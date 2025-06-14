@@ -5,8 +5,6 @@ import datasets
 import polars as pl
 from pathlib import Path
 
-REPOSITORY_PATH = Path(__file__).parent
-
 logger = datasets.logging.get_logger(__name__)
 
 
@@ -35,7 +33,7 @@ MIMIC-III-50: A medical coding dataset from the Mullenbach et al. (2018) paper. 
 We have not processed the text in this dataset. You can obtain the license in https://physionet.org/content/mimiciii/1.4/.
 """
 
-_URL = REPOSITORY_PATH / "data" / "processed" / "mimiciii_50"
+_URL =  Path("data")  / "processed" / "mimiciii_50"
 _URLS = {
     "train": _URL / "train.parquet",
     "val": _URL / "val.parquet",

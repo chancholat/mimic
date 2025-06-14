@@ -6,8 +6,6 @@ import datasets
 import polars as pl
 from pathlib import Path
 
-REPOSITORY_PATH = Path(__file__).parent
-
 logger = datasets.logging.get_logger(__name__)
 
 
@@ -37,7 +35,7 @@ MDACE Profee ICD-10: MDACE is subset of MIMIC-III. Medical coders re-annotated t
 We have not processed the text in this dataset. You can obtain the license in https://physionet.org/content/mimiciii/1.4/.
 """
 
-_URL = REPOSITORY_PATH / "data" / "processed" / "mdace_icd10_profee"
+_URL =  Path("data") / "processed" / "mdace_icd10_profee"
 _URLS = {
     "train": _URL / "train.parquet",
     "val": _URL / "val.parquet",
